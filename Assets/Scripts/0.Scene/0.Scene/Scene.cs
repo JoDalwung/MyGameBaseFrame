@@ -21,7 +21,7 @@ public class Scene : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             Debug.Log(asyncLoad.progress);
-            //Loading Dialog 
+            //Loading Dialog 추가 예정
             yield return null;
         }        
     }
@@ -38,9 +38,5 @@ public class Scene : MonoBehaviour
     { }
     public virtual void _OnExite()
     { }
-
-
-    
-
 
 }

@@ -7,7 +7,7 @@ public class MainScene : Scene
 
     public override void _OnEnter()
     {
-        Debug.Log("Main_onEnter");
+        Debug.Log("Main_onEnter");     
         ActiveScene(SceneName.Game_1_Scene);
     }
 
@@ -15,12 +15,6 @@ public class MainScene : Scene
     {
         Debug.Log("Main_onExit");
     }
-
-
-    
-
-
-
 
 
 }

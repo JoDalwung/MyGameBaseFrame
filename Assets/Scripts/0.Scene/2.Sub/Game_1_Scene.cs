@@ -9,12 +9,9 @@ public class Game_1_Scene : Scene
         Debug.Log("Game_1_Scene_onEnter");
     }
 
-
     public override void _OnExite()
     {
         Debug.Log("Game_1_Scene_onExite");
     }
-
-
 
 }

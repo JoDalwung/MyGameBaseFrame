@@ -4,15 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Scene : MonoBehaviour
+public class IScene : MonoBehaviour
 {
     public enum SceneName
     { 
-        // 여기이름이랑 해당 씬스크립트 이름이랑 동일시할 예정 
-        MainScene,
-        Game_1_Scene,
-        Game_2_Scene,
-        Game_3_Scene,
+        LobbyScene,       
     }
 
     IEnumerator _cActiveScene(string SceneName)
@@ -34,9 +30,9 @@ public class Scene : MonoBehaviour
     private void OnEnable() => _OnEnter();
     private void OnDisable() => _OnExite();
 
-    public virtual void _OnEnter()
+    protected virtual void _OnEnter()
     { }
-    public virtual void _OnExite()
+    protected virtual void _OnExite()
     { }
 
 }

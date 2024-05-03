@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class LobbyContent : IContent
 {
+    
+    public IDialogLoader dialogLoader;
 
-    // 컨탠츠 스크립트가 하는일?
-    // 다이얼로그 스크립트는?
-    // IScene : 씬 전환 및 컨탠츠 로드
-    // IContent : 게임 컨탠츠구현부 및 다이얼로드 로드
-    // IDialog : 게임 ui구현부
 
+    protected override void _OnLoad()
+    {
+        Debug.Log($"_OnLoad : {IScene.SceneName.LobbyScene}");
+        dialogLoader.LoadDialog();
+
+    }
+
+    protected override void _OnLoadComplete()
+    {
+        Debug.Log($"_OnLoadComplete : {IScene.SceneName.LobbyScene}");
+        dialogLoader.ShowDialog();
+    }
 
 
 

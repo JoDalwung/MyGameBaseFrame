@@ -16,8 +16,7 @@ public class IScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneName);
         while (!asyncLoad.isDone)
         {
-            Debug.Log(asyncLoad.progress);
-            //Loading Dialog 추가 예정
+           // Debug.Log(asyncLoad.progress);
             yield return null;
         }        
     }

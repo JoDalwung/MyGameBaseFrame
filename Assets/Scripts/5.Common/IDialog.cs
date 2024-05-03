@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class IDialog : MonoBehaviour
 {
+    public enum DialogName
+    { 
+        LobbyDialog,    
+    }
+
+    // 공용으로 쓸만한 기능 : fade in out
+
+
 
     private void OnEnable() => _OnEnter();
     private void OnDisable() => _OnExite();

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LobbyDialog : IDialog
+public class #SCRIPTNAME# : IDialog
 {
-
     protected override void _OnLoad()
     {
         // ui caching
@@ -32,5 +31,5 @@ public class LobbyDialog : IDialog
     {
 
     }
-
 }
+

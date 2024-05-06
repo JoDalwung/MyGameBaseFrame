@@ -19,7 +19,7 @@ public class IDialogLoader : MonoBehaviour
         {
             for (int i = 0; i < Dialog_names.Count; i++)
             {
-                DialogLayers.Add(Instantiate(Resources.Load<RectTransform>($"UI/2.GameDialog/{Dialog_names[i].ToString()}")));
+                DialogLayers.Add(Instantiate(Resources.Load<RectTransform>($"Dialog/{Dialog_names[i].ToString()}")));
                 DialogLayers[i].transform.SetParent(GameObject.Find("GameManager").transform.GetChild(0).GetChild(0));
             }
             AllHideDialog();

@@ -26,6 +26,14 @@ public class IDialogLoader : MonoBehaviour
         }        
     }
 
+    public void UnLoadDialog()
+    {
+       for (int i = 0; i < DialogLayers.Count; i++)
+         Destroy(DialogLayers[i].gameObject);
+        DialogLayers.Clear();
+    }
+
+
     public void ShowIdxDialog(int idx = 0)
     {
         if(DialogLayers.Count > 0)

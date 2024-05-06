@@ -23,9 +23,10 @@ public class LobbyContent : IContent
     } 
     protected override void _OnExite()
     {
-        dialogLoader.AllHideDialog();
+        dialogLoader.UnLoadDialog();
         _RemoveEvent();
     }
+
 
 
     void _AddEvent(){}

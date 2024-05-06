@@ -22,7 +22,7 @@ public class #SCRIPTNAME# : IContent
     } 
     protected override void _OnExite()
     {
-        dialogLoader.AllHideDialog();
+        dialogLoader.UnLoadDialog();
         _RemoveEvent();
     }
 

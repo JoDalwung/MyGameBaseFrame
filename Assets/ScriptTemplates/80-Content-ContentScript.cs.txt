@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyContent : IContent
+public class #SCRIPTNAME# : IContent
 {
-    
     public IDialogLoader dialogLoader;
 
     protected override void _OnLoad()
@@ -30,5 +29,5 @@ public class LobbyContent : IContent
 
     void _AddEvent(){}
     void _RemoveEvent(){}
-
 }
+

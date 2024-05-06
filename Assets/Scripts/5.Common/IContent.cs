@@ -16,6 +16,4 @@ public class IContent : MonoBehaviour
     protected virtual void _OnEnter() { }
     protected virtual void _OnExite() { }
 
-
-
 }

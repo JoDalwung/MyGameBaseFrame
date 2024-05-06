@@ -181,4 +181,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506034d72cb2b224ab9c701206c591b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialog: 0
+  Dialog_names: 000000000000000000000000
+  DialogLayers: []

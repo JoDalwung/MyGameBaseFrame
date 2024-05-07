@@ -6,6 +6,3 @@
 https://www.notion.so/Base-framework-fe7de796d8a849e093447df6e39c91ce
 
 
-24.02.28  + Singleton 유틸추가 / 버전 : 0.0.0 
-
-24.01.06  + SceneLoad  / 버전 : 0.0.0

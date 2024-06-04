@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class #SCRIPTNAME# : IDialog
 {
+#region Framework
     protected override void _OnLoad()
     {
         // ui caching
@@ -31,5 +32,6 @@ public class #SCRIPTNAME# : IDialog
     {
 
     }
+#endregion
 }
 

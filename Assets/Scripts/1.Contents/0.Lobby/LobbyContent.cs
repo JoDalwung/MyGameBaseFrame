@@ -2,28 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyContent : IContent
+public class LobbyContent : BaseContent
 {
     
-    public IDialogLoader dialogLoader;
+    public BaseDialogLoader DialogLoader;
 
     protected override void _OnLoad()
     {
-        dialogLoader.LoadDialog();
+        DialogLoader.LoadDialog();
     }
 
     protected override void _OnLoadComplete()
     {
-        dialogLoader.ShowIdxDialog(); 
+        DialogLoader.ShowIdxDialog(); 
     }
 
     protected override void _OnEnter()
     {
         _AddEvent();
     } 
-    protected override void _OnExite()
+    protected override void _OnExit()
     {
-        dialogLoader.UnLoadDialog();
+        DialogLoader.UnLoadDialog();
         _RemoveEvent();
     }
 

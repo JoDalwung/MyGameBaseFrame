@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class IScene : MonoBehaviour
+public class BaseScene : Singleton<BaseScene>
 {
     public enum SceneName
     { 
@@ -13,6 +13,9 @@ public class IScene : MonoBehaviour
 
     RectTransform Loading_rect;
     UnityEngine.UI.Text LoadProgress_txt;
+
+    [SerializeField] private Transform _dialogRoot;
+    public Transform DialogRoot => _dialogRoot;
 
     IEnumerator _cActiveScene(string SceneName , bool Loading = true)
     {
@@ -63,6 +66,7 @@ public class IScene : MonoBehaviour
 
     protected virtual void _OnLoad()
     {
+        DontDestroyOnLoad(gameObject);
         Loading_rect = transform.GetChild(0).GetChild(1).GetComponent<RectTransform>();
         LoadProgress_txt = Loading_rect.GetChild(1).GetComponent<UnityEngine.UI.Text>();
         Loading_rect.gameObject.SetActive(false);

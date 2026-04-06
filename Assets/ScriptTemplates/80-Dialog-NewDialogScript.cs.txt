@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class #SCRIPTNAME# : IDialog
+public class #SCRIPTNAME# : BaseDialog
 {
 #region Framework
     protected override void _OnLoad()
@@ -19,7 +19,7 @@ public class #SCRIPTNAME# : IDialog
     {
         _AddEvent();      
     }
-    protected override void _OnExite()
+    protected override void _OnExit()
     {
         _RemoveEvent();
     }

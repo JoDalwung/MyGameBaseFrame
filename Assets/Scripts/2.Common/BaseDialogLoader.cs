@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IDialogLoader : MonoBehaviour
+public class BaseDialogLoader : MonoBehaviour
 {    
-    public List<IDialog.DialogName> Dialog_names = new List<IDialog.DialogName>();
+    public List<BaseDialog.DialogName> Dialog_names = new List<BaseDialog.DialogName>();
     [HideInInspector] public List<RectTransform> DialogLayers = new List<RectTransform>();
     // 1:1 =  Loader : Dialog 
     // 하나의 컨탠츠에서 Dialog를 여러개 사용하는 경우가 있을수 있다.
@@ -19,8 +19,12 @@ public class IDialogLoader : MonoBehaviour
         {
             for (int i = 0; i < Dialog_names.Count; i++)
             {
-                DialogLayers.Add(Instantiate(Resources.Load<RectTransform>($"Dialog/{Dialog_names[i].ToString()}")));
-                DialogLayers[i].transform.SetParent(GameObject.Find("GameManager").transform.GetChild(0).GetChild(0),false);
+                var dialog = Instantiate(
+                    Resources.Load<RectTransform>($"Dialog/{Dialog_names[i]}"),
+                    GameManager.Instance.DialogRoot,  // Find 제거
+                    false
+                );
+                DialogLayers.Add(dialog);
             }
             AllHideDialog();
         }        

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Game_1Content : IContent
+public class Game_1Content : BaseContent
 {
-    public IDialogLoader dialogLoader;
+    public BaseDialogLoader dialogLoader;
 
     protected override void _OnLoad()
     {
@@ -20,7 +20,7 @@ public class Game_1Content : IContent
     {
         _AddEvent();
     } 
-    protected override void _OnExite()
+    protected override void _OnExit()
     {
         dialogLoader.AllHideDialog();
         _RemoveEvent();

@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : IScene
+public class GameManager : BaseScene
 {
-
     // 어떤식으로 쓸지 미정
-    public List<IScene.SceneName> SceneList;    
-    //
-    public IScene.SceneName EntryScene;
-
+    public List<SceneName> SceneList;    
+    public SceneName EntryScene;
     protected override void _OnLoad()
     {
         base._OnLoad();
-        DontDestroyOnLoad(gameObject);
+
+        
         PlayerInfo.Instance.Name = "Player";
     }
 

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class #SCRIPTNAME# : IContent
+public class #SCRIPTNAME# : BaseContent
 {
-    public IDialogLoader dialogLoader;
+    public BaseDialogLoader dialogLoader;
 #region Framework
     protected override void _OnLoad()
     {
@@ -20,7 +20,7 @@ public class #SCRIPTNAME# : IContent
     {
         _AddEvent();
     } 
-    protected override void _OnExite()
+    protected override void _OnExit()
     {
         dialogLoader.UnLoadDialog();
         _RemoveEvent();

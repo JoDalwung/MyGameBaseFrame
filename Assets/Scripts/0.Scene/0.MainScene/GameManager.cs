@@ -7,11 +7,11 @@ public class GameManager : BaseScene
     // 어떤식으로 쓸지 미정
     public List<SceneName> SceneList;    
     public SceneName EntryScene;
+
+
     protected override void _OnLoad()
     {
-        base._OnLoad();
-
-        
+        base._OnLoad();    
         PlayerInfo.Instance.Name = "Player";
     }
 
@@ -21,7 +21,7 @@ public class GameManager : BaseScene
     }
 
     protected override void _OnEnter() => _AddEvent();
-    protected override void _OnExite() => _RemoveEvent();
+    protected override void _OnExit() => _RemoveEvent();
 
     void _AddEvent()
     {

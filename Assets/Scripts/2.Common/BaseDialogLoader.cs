@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseDialogLoader : MonoBehaviour
 {    
-    public List<BaseDialog.DialogName> Dialog_names = new List<BaseDialog.DialogName>();
+    public List<DialogName> Dialog_names = new List<DialogName>();
     [HideInInspector] public List<RectTransform> DialogLayers = new List<RectTransform>();
     // 1:1 =  Loader : Dialog 
     // 하나의 컨탠츠에서 Dialog를 여러개 사용하는 경우가 있을수 있다.

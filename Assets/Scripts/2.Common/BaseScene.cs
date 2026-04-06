@@ -6,16 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class BaseScene : Singleton<BaseScene>
 {
-    public enum SceneName
-    { 
-        LobbyScene,       
-    }
-
-    RectTransform Loading_rect;
-    UnityEngine.UI.Text LoadProgress_txt;
-
+    [SerializeField] RectTransform Loading_rect;
+    [SerializeField] UnityEngine.UI.Text LoadProgress_txt;
     [SerializeField] private Transform _dialogRoot;
     public Transform DialogRoot => _dialogRoot;
+    public SceneName CurrentScene;
 
     IEnumerator _cActiveScene(string SceneName , bool Loading = true)
     {
@@ -28,6 +23,7 @@ public class BaseScene : Singleton<BaseScene>
         {
             Loading_rect.gameObject.SetActive(true);
         }
+
         while (!asyncLoad.isDone)
         {
             if (Loading)
@@ -49,34 +45,27 @@ public class BaseScene : Singleton<BaseScene>
                 yield return null;
         }        
     }
-
     protected void ActiveScene(SceneName sceneName, bool Loading = true)
     {
+        CurrentScene = sceneName;
         StartCoroutine(_cActiveScene(sceneName.ToString(), Loading));
     }
-
-
-
 
     private void Awake() => _OnLoad();
     private void Start() => _OnLoadComplete();
     private void OnEnable() => _OnEnter();
-    private void OnDisable() => _OnExite();
-
+    private void OnDisable() => _OnExit();
 
     protected virtual void _OnLoad()
     {
         DontDestroyOnLoad(gameObject);
-        Loading_rect = transform.GetChild(0).GetChild(1).GetComponent<RectTransform>();
-        LoadProgress_txt = Loading_rect.GetChild(1).GetComponent<UnityEngine.UI.Text>();
         Loading_rect.gameObject.SetActive(false);
     }
-
     protected virtual void _OnLoadComplete()
     {}
     protected virtual void _OnEnter()
     {}
-    protected virtual void _OnExite()
+    protected virtual void _OnExit()
     {}
 
 }

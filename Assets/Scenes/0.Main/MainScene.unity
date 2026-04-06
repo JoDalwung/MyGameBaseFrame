@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &528812047 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5919303126488965854, guid: 25e7673531eb2834da7c830486535b92, type: 3}
+  m_PrefabInstance: {fileID: 5919303126794431525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &666760171
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,9 +170,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d404eac55b915e459f1c8c0d33e1e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Loading_rect: {fileID: 528812047}
+  LoadProgress_txt: {fileID: 1450663806}
   _dialogRoot: {fileID: 4175720101226470769}
   SceneList: 00000000
   EntryScene: 0
+  CurrentScene: 0
+--- !u!114 &1450663806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5919303126464218362, guid: 25e7673531eb2834da7c830486535b92, type: 3}
+  m_PrefabInstance: {fileID: 5919303126794431525}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4175720101226470769 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7770597880598835540, guid: 25e7673531eb2834da7c830486535b92, type: 3}

@@ -12,7 +12,6 @@ public class BaseContent : MonoBehaviour
 
     protected virtual void _OnLoad() { }
     protected virtual void _OnLoadComplete() { }
-
     protected virtual void _OnEnter() { }
     protected virtual void _OnExit() { }
 

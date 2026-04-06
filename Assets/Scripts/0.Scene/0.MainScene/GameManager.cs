@@ -12,7 +12,6 @@ public class GameManager : BaseScene
     protected override void _OnLoad()
     {
         base._OnLoad();    
-        PlayerInfo.Instance.Name = "Player";
     }
 
     protected override void _OnLoadComplete()

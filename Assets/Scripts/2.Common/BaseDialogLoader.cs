@@ -21,7 +21,7 @@ public class BaseDialogLoader : MonoBehaviour
             {
                 var dialog = Instantiate(
                     Resources.Load<RectTransform>($"Dialog/{Dialog_names[i]}"),
-                    GameManager.Instance.DialogRoot,  // Find Á¦°Å
+                    GameManager.Instance.DialogRoot,
                     false
                 );
                 DialogLayers.Add(dialog);

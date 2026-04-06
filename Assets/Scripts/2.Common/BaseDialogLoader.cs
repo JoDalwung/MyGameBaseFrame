@@ -12,7 +12,6 @@ public class BaseDialogLoader : MonoBehaviour
     // DialogLayers가 Dialog_names 순서를 기준으로 레이어 캐싱
     // Content에서 수동으로 ui 로드를 하자
 
-
     public void LoadDialog()
     {
         if (Dialog_names.Count > 0)
@@ -37,7 +36,6 @@ public class BaseDialogLoader : MonoBehaviour
         DialogLayers.Clear();
     }
 
-
     public void ShowIdxDialog(int idx = 0)
     {
         if(DialogLayers.Count > 0)
@@ -57,6 +55,5 @@ public class BaseDialogLoader : MonoBehaviour
             DialogLayers[i].gameObject.SetActive(false);
         }    
     } 
-
 
 }
